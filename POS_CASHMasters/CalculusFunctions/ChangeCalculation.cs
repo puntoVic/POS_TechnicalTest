@@ -2,9 +2,9 @@
 
 namespace CalculusFunctions
 {
-    public static class ChangeCalculation : IChangeCalculation
+    public class ChangeCalculation : IChangeCalculation
     {
-        Dictionary<int, int> CalculateChange(Dictionary<int, int> amountPayment, decimal price)
+        Dictionary<int, int> IChangeCalculation.CalculateChange(Dictionary<int, int> amountPayment, decimal price)
         {
             throw new NotImplementedException();
         }
