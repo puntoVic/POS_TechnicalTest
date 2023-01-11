@@ -1,0 +1,15 @@
+D:\Proyectos\POS_TechnicalTest\POS_CASHMasters\POS_CASHMasters\bin\Debug\net6.0\POS_CASHMasters.exe
+D:\Proyectos\POS_TechnicalTest\POS_CASHMasters\POS_CASHMasters\bin\Debug\net6.0\POS_CASHMasters.deps.json
+D:\Proyectos\POS_TechnicalTest\POS_CASHMasters\POS_CASHMasters\bin\Debug\net6.0\POS_CASHMasters.runtimeconfig.json
+D:\Proyectos\POS_TechnicalTest\POS_CASHMasters\POS_CASHMasters\bin\Debug\net6.0\POS_CASHMasters.dll
+D:\Proyectos\POS_TechnicalTest\POS_CASHMasters\POS_CASHMasters\bin\Debug\net6.0\POS_CASHMasters.pdb
+D:\Proyectos\POS_TechnicalTest\POS_CASHMasters\POS_CASHMasters\obj\Debug\net6.0\POS_CASHMasters.csproj.AssemblyReference.cache
+D:\Proyectos\POS_TechnicalTest\POS_CASHMasters\POS_CASHMasters\obj\Debug\net6.0\POS_CASHMasters.GeneratedMSBuildEditorConfig.editorconfig
+D:\Proyectos\POS_TechnicalTest\POS_CASHMasters\POS_CASHMasters\obj\Debug\net6.0\POS_CASHMasters.AssemblyInfoInputs.cache
+D:\Proyectos\POS_TechnicalTest\POS_CASHMasters\POS_CASHMasters\obj\Debug\net6.0\POS_CASHMasters.AssemblyInfo.cs
+D:\Proyectos\POS_TechnicalTest\POS_CASHMasters\POS_CASHMasters\obj\Debug\net6.0\POS_CASHMasters.csproj.CoreCompileInputs.cache
+D:\Proyectos\POS_TechnicalTest\POS_CASHMasters\POS_CASHMasters\obj\Debug\net6.0\POS_CASHMasters.dll
+D:\Proyectos\POS_TechnicalTest\POS_CASHMasters\POS_CASHMasters\obj\Debug\net6.0\refint\POS_CASHMasters.dll
+D:\Proyectos\POS_TechnicalTest\POS_CASHMasters\POS_CASHMasters\obj\Debug\net6.0\POS_CASHMasters.pdb
+D:\Proyectos\POS_TechnicalTest\POS_CASHMasters\POS_CASHMasters\obj\Debug\net6.0\POS_CASHMasters.genruntimeconfig.cache
+D:\Proyectos\POS_TechnicalTest\POS_CASHMasters\POS_CASHMasters\obj\Debug\net6.0\ref\POS_CASHMasters.dll
