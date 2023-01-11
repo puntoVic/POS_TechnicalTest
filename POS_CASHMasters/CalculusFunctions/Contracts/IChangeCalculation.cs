@@ -4,6 +4,6 @@ namespace CalculusFunctions.Contracts
 {
     public interface IChangeCalculation
     {
-        public Dictionary<int, int> CalculateChange(Dictionary<int, int> amountPayment, decimal price);
+        public Dictionary<decimal, decimal> CalculateChange(Dictionary<decimal, decimal> amountPayment, decimal price);
     }
 }
