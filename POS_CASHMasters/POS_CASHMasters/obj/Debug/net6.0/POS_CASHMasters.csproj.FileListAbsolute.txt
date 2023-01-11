@@ -13,3 +13,6 @@ D:\Proyectos\POS_TechnicalTest\POS_CASHMasters\POS_CASHMasters\obj\Debug\net6.0\
 D:\Proyectos\POS_TechnicalTest\POS_CASHMasters\POS_CASHMasters\obj\Debug\net6.0\POS_CASHMasters.pdb
 D:\Proyectos\POS_TechnicalTest\POS_CASHMasters\POS_CASHMasters\obj\Debug\net6.0\POS_CASHMasters.genruntimeconfig.cache
 D:\Proyectos\POS_TechnicalTest\POS_CASHMasters\POS_CASHMasters\obj\Debug\net6.0\ref\POS_CASHMasters.dll
+D:\Proyectos\POS_TechnicalTest\POS_CASHMasters\POS_CASHMasters\bin\Debug\net6.0\CalculusFunctions.dll
+D:\Proyectos\POS_TechnicalTest\POS_CASHMasters\POS_CASHMasters\bin\Debug\net6.0\CalculusFunctions.pdb
+D:\Proyectos\POS_TechnicalTest\POS_CASHMasters\POS_CASHMasters\obj\Debug\net6.0\POS_CASHMasters.csproj.CopyComplete

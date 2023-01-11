@@ -4,44 +4,46 @@ namespace CalculusFunctions
 {
     public class ChangeCalculation : IChangeCalculation
     {
-        static decimal decimalChange;
-
-        Dictionary<decimal, decimal> IChangeCalculation.CalculateChange(Dictionary<decimal, decimal> amountPayment, decimal price)
+        
+        Dictionary<double, int> IChangeCalculation.CalculateChange(Dictionary<double, double> amountPayment, double price)
         {
-            decimal[] denominations = { 100, 50, 20, 10, 5, 1 };
-            decimal totalAmount = calculateAmountPayment(amountPayment);
-            Dictionary<decimal, decimal> minChange = new();
+            double[] denominations = {1000, 500, 100, 50, 20, 10, 5, 1, 0.5 };
+            double totalAmount = calculateAmountPayment(amountPayment);
+            Dictionary<double, int> coinsUsed = new();
             if (totalAmount > price)
             {
-                decimal decimalChange = totalAmount - price;
+                double  totalChange = totalAmount - price;
                 int n = denominations.Length;
-
-                minChange.Add(0, 0);
-
-                for (int i = 1; i <= n; i++)
+                for (int i = 0; i < n; i += 1)
                 {
-                    for (int j = 0; j < n; j++)
+                    coinsUsed.Add(denominations[i], 0);
+                }
+                
+
+
+        
+                var changeTemp = totalChange;
+                foreach (var coin in denominations)
+                {
+                    if (coin < totalChange)
                     {
-                        if (denominations[j] <= i)
-                        {
-                            decimal temp = minChange[i - denominations[j]] + 1;
-                            if (temp < minChange[i])
-                                minChange[i] = temp;
-                        }
+                        coinsUsed[coin] = (int)(changeTemp / coin);
+                        changeTemp = changeTemp - (coinsUsed[coin] * coin);
                     }
                 }
-
-                Console.WriteLine("The minimum number of coins needed to make change is: " + minChange[(int)decimalChange]);
-
-
+                
             }
-            return minChange;
+            foreach (var coin in coinsUsed)
+                if(coin.Value > 0)
+                Console.Write("You need to give " + coin.Value + " of denomination "+ coin.Key + " \n");
+
+            return coinsUsed;
 ;
         }
 
-        private decimal calculateAmountPayment(Dictionary<decimal, decimal> amountPayment)
+        private double calculateAmountPayment(Dictionary<double, double> amountPayment)
         {
-            decimal totalAmount = 0;
+            double totalAmount = 0;
             foreach (var amount in amountPayment)
             {
                 totalAmount += amount.Key * amount.Value;
