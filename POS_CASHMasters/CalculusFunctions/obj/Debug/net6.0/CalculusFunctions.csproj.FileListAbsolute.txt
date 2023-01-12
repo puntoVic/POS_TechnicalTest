@@ -10,3 +10,6 @@ D:\Proyectos\POS_TechnicalTest\POS_CASHMasters\CalculusFunctions\obj\Debug\net6.
 D:\Proyectos\POS_TechnicalTest\POS_CASHMasters\CalculusFunctions\obj\Debug\net6.0\refint\CalculusFunctions.dll
 D:\Proyectos\POS_TechnicalTest\POS_CASHMasters\CalculusFunctions\obj\Debug\net6.0\CalculusFunctions.pdb
 D:\Proyectos\POS_TechnicalTest\POS_CASHMasters\CalculusFunctions\obj\Debug\net6.0\ref\CalculusFunctions.dll
+D:\Proyectos\POS_TechnicalTest\POS_CASHMasters\CalculusFunctions\bin\Debug\net6.0\Common.dll
+D:\Proyectos\POS_TechnicalTest\POS_CASHMasters\CalculusFunctions\bin\Debug\net6.0\Common.pdb
+D:\Proyectos\POS_TechnicalTest\POS_CASHMasters\CalculusFunctions\obj\Debug\net6.0\CalculusFunctions.csproj.CopyComplete

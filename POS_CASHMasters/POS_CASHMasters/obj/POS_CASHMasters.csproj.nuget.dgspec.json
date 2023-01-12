@@ -27,7 +27,11 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\Proyectos\\POS_TechnicalTest\\POS_CASHMasters\\Catalogs\\Common.csproj": {
+                "projectPath": "D:\\Proyectos\\POS_TechnicalTest\\POS_CASHMasters\\Catalogs\\Common.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -59,12 +63,12 @@
         }
       }
     },
-    "D:\\Proyectos\\POS_TechnicalTest\\POS_CASHMasters\\Catalogs\\Data.csproj": {
+    "D:\\Proyectos\\POS_TechnicalTest\\POS_CASHMasters\\Catalogs\\Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Proyectos\\POS_TechnicalTest\\POS_CASHMasters\\Catalogs\\Data.csproj",
-        "projectName": "Data",
-        "projectPath": "D:\\Proyectos\\POS_TechnicalTest\\POS_CASHMasters\\Catalogs\\Data.csproj",
+        "projectUniqueName": "D:\\Proyectos\\POS_TechnicalTest\\POS_CASHMasters\\Catalogs\\Common.csproj",
+        "projectName": "Common",
+        "projectPath": "D:\\Proyectos\\POS_TechnicalTest\\POS_CASHMasters\\Catalogs\\Common.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
         "outputPath": "D:\\Proyectos\\POS_TechnicalTest\\POS_CASHMasters\\Catalogs\\obj\\",
         "projectStyle": "PackageReference",
@@ -141,8 +145,8 @@
               "D:\\Proyectos\\POS_TechnicalTest\\POS_CASHMasters\\CalculusFunctions\\CalculusFunctions.csproj": {
                 "projectPath": "D:\\Proyectos\\POS_TechnicalTest\\POS_CASHMasters\\CalculusFunctions\\CalculusFunctions.csproj"
               },
-              "D:\\Proyectos\\POS_TechnicalTest\\POS_CASHMasters\\Catalogs\\Data.csproj": {
-                "projectPath": "D:\\Proyectos\\POS_TechnicalTest\\POS_CASHMasters\\Catalogs\\Data.csproj"
+              "D:\\Proyectos\\POS_TechnicalTest\\POS_CASHMasters\\Catalogs\\Common.csproj": {
+                "projectPath": "D:\\Proyectos\\POS_TechnicalTest\\POS_CASHMasters\\Catalogs\\Common.csproj"
               }
             }
           }

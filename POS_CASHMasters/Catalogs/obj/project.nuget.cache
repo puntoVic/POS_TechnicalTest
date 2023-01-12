@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "UUoDrsEOiwZyVSvFPXX9Plib5UQwn/ZclvzcAT4cXJUhyHED7rEsZQRsswPlefqPt8DD78TfKgasVT5fDUHWlA==",
+  "dgSpecHash": "LBMH8JAuhsVQdkzmdQO1OPMuD/GCvZpcMmAdDyM6E5bz9e/zjWkBptAPRr8ucFiKFGTKi/cRpnsn3Ae1aesxgA==",
   "success": true,
-  "projectFilePath": "D:\\Proyectos\\POS_TechnicalTest\\POS_CASHMasters\\Catalogs\\Data.csproj",
+  "projectFilePath": "D:\\Proyectos\\POS_TechnicalTest\\POS_CASHMasters\\Catalogs\\Common.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

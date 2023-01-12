@@ -1,9 +1,8 @@
-﻿
-using Data.Catalogs;
+﻿using Data.Catalogs;
 using CalculusFunctions;
 using CalculusFunctions.Contracts;
 using System.Configuration;
-using System.Runtime.CompilerServices;
+using Common.Catalogs;
 
 internal class Program
 {
@@ -24,39 +23,61 @@ internal class Program
         Dictionary<double, double> amountDictionary = new Dictionary<double, double>();
         while (!ready)
         {
-            Console.Write("\n\nSet denomination: ");
-            double denomination = double.Parse(Console.ReadLine());
-            if (denominations.Contains(denomination))
+            try
             {
-                Console.Write("\nAdd quantity of this denomination: ");
-                double quantity = double.Parse(Console.ReadLine());
-                amountDictionary.Add(denomination, quantity);
-                Console.Write("\nAre all denominations to load(y/n): ");
-                string response = Console.ReadLine();
-                if (response == "y")
+                Console.Write("\n\nSet denomination: ");
+                double denomination = double.Parse(Console.ReadLine());
+                if (denominations.Contains(denomination))
                 {
-                    ready = true;
+                    Console.Write("\nAdd quantity of this denomination: ");
+                    double quantity = double.Parse(Console.ReadLine());
+                    if (quantity > 0)
+                    {
+                        amountDictionary.Add(denomination, quantity);
+                    }
+                    Console.Write("\nAre all denominations to load(y/n): ");
+                    string response = Console.ReadLine();
+                    if (response == "y")
+                    {
+                        ready = true;
+                    }
+                }
+                else
+                {
+                    Console.Write("\nWrong denomination. Try again.\n");
                 }
             }
-            else
+            
+            catch (FormatException ex) 
             {
-                Console.Write("\n\nWrong denomination. Try Again.");
+                Console.Write(ex.Message);
             }
         }
-
-        Console.Write("\n\nSet the price: ");
-        double price = double.Parse(Console.ReadLine());
-
-
+        double price = 0;
+        try
+        {
+            Console.Write("\n\nSet the price: ");
+            price = double.Parse(Console.ReadLine());
+        }
+        catch (FormatException ex)
+        {
+            Console.Write(ex.Message);
+        }
 
         var coinsUsed = changeCalculation.CalculateChange(amountDictionary, price);
-        foreach (var coin in coinsUsed)
+        if (coinsUsed.DidSucceed)
         {
-            if (coin.Value > 0)
+            foreach (var coin in coinsUsed.Value)
             {
-                Console.Write("\n\nYou need to give " + coin.Value + " of denomination " + coin.Key + " \n");
+                if (coin.Value > 0)
+                {
+                    Console.Write("\n\nYou need to give " + coin.Value + " of denomination " + coin.Key + " \n");
+                }
             }
         }
-
+        else if(coinsUsed.ErrorCode == ErrorCodes.InsufficientAmount)
+        {
+            Console.Write("\n The amount paid is insufficient \n");
+        }
     }
 }

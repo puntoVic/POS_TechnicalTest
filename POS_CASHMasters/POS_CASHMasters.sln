@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "POS_CASHMasters", "POS_CASH
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CalculusFunctions", "CalculusFunctions\CalculusFunctions.csproj", "{8D4480D0-E773-44B1-8897-AC1D4CE704B1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Catalogs\Data.csproj", "{94317C00-108D-4531-822C-C6BE08C4F065}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Catalogs\Common.csproj", "{94317C00-108D-4531-822C-C6BE08C4F065}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

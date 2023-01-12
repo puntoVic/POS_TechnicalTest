@@ -1,9 +1,10 @@
-﻿using System.Reflection;
+﻿using Common.Models;
+using System.Reflection;
 
 namespace CalculusFunctions.Contracts
 {
     public interface IChangeCalculation
     {
-        public Dictionary<double, int> CalculateChange(Dictionary<double, double> amountPayment, double price);
+        public ManagerResult<Dictionary<double, int>> CalculateChange(Dictionary<double, double> amountPayment, double price);
     }
 }

@@ -27,5 +27,5 @@ D:\Proyectos\POS_TechnicalTest\POS_CASHMasters\POS_CASHMasters\bin\Debug\net6.0\
 D:\Proyectos\POS_TechnicalTest\POS_CASHMasters\POS_CASHMasters\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
 D:\Proyectos\POS_TechnicalTest\POS_CASHMasters\POS_CASHMasters\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 D:\Proyectos\POS_TechnicalTest\POS_CASHMasters\POS_CASHMasters\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
-D:\Proyectos\POS_TechnicalTest\POS_CASHMasters\POS_CASHMasters\bin\Debug\net6.0\Data.dll
-D:\Proyectos\POS_TechnicalTest\POS_CASHMasters\POS_CASHMasters\bin\Debug\net6.0\Data.pdb
+D:\Proyectos\POS_TechnicalTest\POS_CASHMasters\POS_CASHMasters\bin\Debug\net6.0\Common.dll
+D:\Proyectos\POS_TechnicalTest\POS_CASHMasters\POS_CASHMasters\bin\Debug\net6.0\Common.pdb

@@ -9,7 +9,7 @@
       "POS_CASHMasters/1.0.0": {
         "dependencies": {
           "CalculusFunctions": "1.0.0",
-          "Data": "1.0.0",
+          "Common": "1.0.0",
           "System.Configuration.ConfigurationManager": "7.0.0"
         },
         "runtime": {
@@ -110,13 +110,16 @@
         }
       },
       "CalculusFunctions/1.0.0": {
+        "dependencies": {
+          "Common": "1.0.0"
+        },
         "runtime": {
           "CalculusFunctions.dll": {}
         }
       },
-      "Data/1.0.0": {
+      "Common/1.0.0": {
         "runtime": {
-          "Data.dll": {}
+          "Common.dll": {}
         }
       }
     }
@@ -174,7 +177,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Data/1.0.0": {
+    "Common/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
