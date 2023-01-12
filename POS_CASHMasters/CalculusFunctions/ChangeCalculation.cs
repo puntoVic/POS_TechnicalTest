@@ -8,8 +8,7 @@ namespace CalculusFunctions
 {
     public class ChangeCalculation : IChangeCalculation
     {
-        private double[] denominations;
-        private readonly Dictionary<double, int> coinsUsed;
+        private double[]? denominations;
         private static readonly object padlock = new();
         private static ChangeCalculation? instance;
         
@@ -19,7 +18,7 @@ namespace CalculusFunctions
         /// </summary>
         private ChangeCalculation()
         {
-            coinsUsed = new();
+            
         }
 
         /// <summary>
@@ -60,6 +59,7 @@ namespace CalculusFunctions
                 return ManagerResult<Dictionary<double, int>>.FromError(ErrorCodes.WrongDenomination);
             }
             double totalAmount = CalculateAmountPayment(amountPayment);
+            Dictionary<double, int> coinsUsed = new();
             try
             {
                 if (!(totalAmount > price))
@@ -68,11 +68,19 @@ namespace CalculusFunctions
                 }
                 
                 double totalChange = totalAmount - price;
-
+                
+                for (int i = 0; i < this.denominations.Length; i += 1)
+                {
+                    coinsUsed.Add(denominations[i], 0);
+                }
                 var changeTemp = totalChange;
                 foreach (var coin in denominations)
                 {
-                    if (coin < totalChange)
+                    if(changeTemp == 0)
+                    {
+                        break;
+                    }
+                    if (coin <= totalChange)
                     {
                         coinsUsed[coin] = (int)(changeTemp / coin);
                         changeTemp -= (coinsUsed[coin] * coin);
@@ -123,15 +131,12 @@ namespace CalculusFunctions
             return ManagerResult<double[]>.FromError(ErrorCodes.NotExistCurrencyCatalog);
         }
 
-        public ManagerResult<double[]> SetDenominations(string? currency)
+        public ManagerResult<double[]> SetDenominations(string currency)
         {
             try
             {
+                
                 this.denominations??= Denominations.Currencies[currency];
-                for (int i = 0; i < this.denominations.Length; i += 1)
-                {
-                    coinsUsed.Add(denominations[i], 0);
-                }
                 
                 return ManagerResult<double[]>.FromSuccess(this.denominations);
             }

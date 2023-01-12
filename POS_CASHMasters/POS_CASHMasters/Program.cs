@@ -10,7 +10,7 @@ internal class Program
 {
     
 
-    private static void Main(string[] args)
+    private static void Main()
     {
         bool turnOn = true;
         
@@ -34,7 +34,7 @@ internal class Program
             }
 
             bool ready = false;
-            Dictionary<double, double> amountDictionary = new Dictionary<double, double>();
+            Dictionary<double, double> amountDictionary = new();
             while (!ready)
             {
                 try
