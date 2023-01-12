@@ -34,12 +34,8 @@ namespace CalculusFunctions
                 }
                 
             }
-            foreach (var coin in coinsUsed)
-                if(coin.Value > 0)
-                Console.Write("You need to give " + coin.Value + " of denomination "+ coin.Key + " \n");
-
+            
             return coinsUsed;
-;
         }
 
         private double calculateAmountPayment(Dictionary<double, double> amountPayment)
