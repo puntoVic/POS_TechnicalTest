@@ -136,7 +136,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "Common": "1.0.0"
+          "Common": "1.0.0",
+          "System.Configuration.ConfigurationManager": "7.0.0"
         },
         "compile": {
           "bin/placeholder/CalculusFunctions.dll": {}
@@ -354,7 +355,6 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "CalculusFunctions >= 1.0.0",
-      "Common >= 1.0.0",
       "System.Configuration.ConfigurationManager >= 7.0.0"
     ]
   },
@@ -387,9 +387,6 @@
           "projectReferences": {
             "D:\\Proyectos\\POS_TechnicalTest\\POS_CASHMasters\\CalculusFunctions\\CalculusFunctions.csproj": {
               "projectPath": "D:\\Proyectos\\POS_TechnicalTest\\POS_CASHMasters\\CalculusFunctions\\CalculusFunctions.csproj"
-            },
-            "D:\\Proyectos\\POS_TechnicalTest\\POS_CASHMasters\\Catalogs\\Common.csproj": {
-              "projectPath": "D:\\Proyectos\\POS_TechnicalTest\\POS_CASHMasters\\Catalogs\\Common.csproj"
             }
           }
         }

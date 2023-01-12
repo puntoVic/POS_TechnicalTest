@@ -3,6 +3,9 @@ namespace Common.Catalogs
 {
     public enum ErrorCodes
     {
-        InsufficientAmount
+        InsufficientAmount,
+        NotExistCurrencyCatalog,
+        NullReferenceException,
+        WrongDenomination
     }
 }

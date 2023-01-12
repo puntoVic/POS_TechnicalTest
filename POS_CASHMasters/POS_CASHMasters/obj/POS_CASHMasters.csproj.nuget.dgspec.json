@@ -43,6 +43,12 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "System.Configuration.ConfigurationManager": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -144,9 +150,6 @@
             "projectReferences": {
               "D:\\Proyectos\\POS_TechnicalTest\\POS_CASHMasters\\CalculusFunctions\\CalculusFunctions.csproj": {
                 "projectPath": "D:\\Proyectos\\POS_TechnicalTest\\POS_CASHMasters\\CalculusFunctions\\CalculusFunctions.csproj"
-              },
-              "D:\\Proyectos\\POS_TechnicalTest\\POS_CASHMasters\\Catalogs\\Common.csproj": {
-                "projectPath": "D:\\Proyectos\\POS_TechnicalTest\\POS_CASHMasters\\Catalogs\\Common.csproj"
               }
             }
           }

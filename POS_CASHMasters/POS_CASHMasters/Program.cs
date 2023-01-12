@@ -3,81 +3,110 @@ using CalculusFunctions;
 using CalculusFunctions.Contracts;
 using System.Configuration;
 using Common.Catalogs;
+using System.Diagnostics.CodeAnalysis;
+using System.Reflection;
 
 internal class Program
 {
+    
+
     private static void Main(string[] args)
     {
-        string currency = ConfigurationManager.AppSettings["Currency"];
-        double[] denominations = Denominations.Currencies[currency];
-        IChangeCalculation changeCalculation = new ChangeCalculation(denominations);
+        bool turnOn = true;
         
-
-        Console.Write("Denominations available in " + currency + ":");
-        foreach (var denomination in denominations)
+        string? currency = ConfigurationManager.AppSettings["Currency"];
+        IChangeCalculation changeCalculation = ChangeCalculation.Instance;
+        var denominationsResult = changeCalculation.SetDenominations(currency);
+        if (!denominationsResult.DidSucceed)
         {
-            Console.Write(denomination + ", ");
+            ///For change currency need to replace the value in POS_CASHMasters/App.config file
+            ///currencies availables: "USA", "EUR", "JPY", "CHF"
+            Console.Write("Currency configuration error");
+            turnOn = false;
         }
-
-        bool ready = false;
-        Dictionary<double, double> amountDictionary = new Dictionary<double, double>();
-        while (!ready)
+        while (turnOn)
         {
-            try
+            var denominations = denominationsResult.Value;
+            Console.Write("Denominations available in " + currency + ":");
+            foreach (var denomination in denominations)
             {
-                Console.Write("\n\nSet denomination: ");
-                double denomination = double.Parse(Console.ReadLine());
-                if (denominations.Contains(denomination))
+                Console.Write(denomination + ", ");
+            }
+
+            bool ready = false;
+            Dictionary<double, double> amountDictionary = new Dictionary<double, double>();
+            while (!ready)
+            {
+                try
                 {
-                    Console.Write("\nAdd quantity of this denomination: ");
-                    double quantity = double.Parse(Console.ReadLine());
-                    if (quantity > 0)
+                    Console.Write("\n\nSet denomination: ");
+                    double denomination = double.Parse(Console.ReadLine());
+                    if (denominations.Contains(denomination) && !amountDictionary.ContainsKey(denomination))
                     {
-                        amountDictionary.Add(denomination, quantity);
+                        Console.Write("\nAdd quantity of this denomination: ");
+                        double quantity = double.Parse(Console.ReadLine());
+                        if (quantity > 0)
+                        {
+                            amountDictionary.Add(denomination, quantity);
+                        }
+                        Console.Write("\nAre all denominations to load(y/n): ");
+                        string response = Console.ReadLine();
+                        if (response == "y")
+                        {
+                            ready = true;
+                        }
                     }
-                    Console.Write("\nAre all denominations to load(y/n): ");
-                    string response = Console.ReadLine();
-                    if (response == "y")
+                    else
                     {
-                        ready = true;
+                        Console.Write("\nWrong or repeat denomination. Try again.\n");
                     }
                 }
-                else
+                catch (FormatException ex)
                 {
-                    Console.Write("\nWrong denomination. Try again.\n");
+                    Console.Write(ex.Message);
+                }
+                catch (Exception ex)
+                {
+                    Console.Write(ex.Message);
                 }
             }
-            
-            catch (FormatException ex) 
+            double price = 0;
+            try
+            {
+                Console.Write("\n\nSet the price: ");
+                price = double.Parse(Console.ReadLine());
+            }
+            catch (FormatException ex)
             {
                 Console.Write(ex.Message);
             }
-        }
-        double price = 0;
-        try
-        {
-            Console.Write("\n\nSet the price: ");
-            price = double.Parse(Console.ReadLine());
-        }
-        catch (FormatException ex)
-        {
-            Console.Write(ex.Message);
-        }
 
-        var coinsUsed = changeCalculation.CalculateChange(amountDictionary, price);
-        if (coinsUsed.DidSucceed)
-        {
-            foreach (var coin in coinsUsed.Value)
+            var coinsUsed = changeCalculation.CalculateChange(amountDictionary, price);
+            if (coinsUsed.DidSucceed)
             {
-                if (coin.Value > 0)
+                foreach (var coin in coinsUsed.Value)
                 {
-                    Console.Write("\n\nYou need to give " + coin.Value + " of denomination " + coin.Key + " \n");
+                    if (coin.Value > 0)
+                    {
+                        Console.Write("\n\nYou need to give " + coin.Value + " of denomination " + coin.Key + " \n");
+                    }
                 }
             }
-        }
-        else if(coinsUsed.ErrorCode == ErrorCodes.InsufficientAmount)
-        {
-            Console.Write("\n The amount paid is insufficient \n");
+            else if (coinsUsed.ErrorCode == ErrorCodes.InsufficientAmount)
+            {
+                Console.Write("\n The amount paid is insufficient \n");
+            }
+            else if (coinsUsed.ErrorCode == ErrorCodes.WrongDenomination)
+            {
+                Console.Write("\n Some denomination insert doesn't exist \n");
+            }
+
+            Console.Write("\n If you want to exit press 'y' or press enter to continue\n");
+            string turnOffresponse = Console.ReadLine();
+            if (turnOffresponse == "y")
+            {
+                turnOn = false;
+            }
         }
     }
 }

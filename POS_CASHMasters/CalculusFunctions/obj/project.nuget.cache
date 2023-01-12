@@ -1,8 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "0EBHzsznETa1/qgvES5T/9FIghe7SjKFUjS8rE9+TF1WnEchwxDFzN6UNZleA9NyHDA5f1LI0YlSKYwCHcr+ww==",
+  "dgSpecHash": "4MXb9h6iB+FINTBngVdMb36XImyop1cyV3W9ca9DiJGaPMZbVJUI0yyDuqNXelko4zt4bXgOegACeW3x9SmQvw==",
   "success": true,
   "projectFilePath": "D:\\Proyectos\\POS_TechnicalTest\\POS_CASHMasters\\CalculusFunctions\\CalculusFunctions.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.win32.systemevents\\7.0.0\\microsoft.win32.systemevents.7.0.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\system.configuration.configurationmanager\\7.0.0\\system.configuration.configurationmanager.7.0.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\system.drawing.common\\7.0.0\\system.drawing.common.7.0.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\system.security.cryptography.protecteddata\\7.0.0\\system.security.cryptography.protecteddata.7.0.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\system.security.permissions\\7.0.0\\system.security.permissions.7.0.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\system.windows.extensions\\7.0.0\\system.windows.extensions.7.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

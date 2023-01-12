@@ -13,7 +13,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CalculusFunctions\CalculusFunctions.csproj" />
-    <ProjectReference Include="..\Catalogs\Common.csproj" />
   </ItemGroup>
 
 </Project>
