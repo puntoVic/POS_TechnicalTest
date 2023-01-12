@@ -1,0 +1,12 @@
+D:\Proyectos\POS_TechnicalTest\POS_CASHMasters\Catalogs\bin\Debug\net6.0\Data.deps.json
+D:\Proyectos\POS_TechnicalTest\POS_CASHMasters\Catalogs\bin\Debug\net6.0\Data.dll
+D:\Proyectos\POS_TechnicalTest\POS_CASHMasters\Catalogs\bin\Debug\net6.0\Data.pdb
+D:\Proyectos\POS_TechnicalTest\POS_CASHMasters\Catalogs\obj\Debug\net6.0\Data.csproj.AssemblyReference.cache
+D:\Proyectos\POS_TechnicalTest\POS_CASHMasters\Catalogs\obj\Debug\net6.0\Data.GeneratedMSBuildEditorConfig.editorconfig
+D:\Proyectos\POS_TechnicalTest\POS_CASHMasters\Catalogs\obj\Debug\net6.0\Data.AssemblyInfoInputs.cache
+D:\Proyectos\POS_TechnicalTest\POS_CASHMasters\Catalogs\obj\Debug\net6.0\Data.AssemblyInfo.cs
+D:\Proyectos\POS_TechnicalTest\POS_CASHMasters\Catalogs\obj\Debug\net6.0\Data.csproj.CoreCompileInputs.cache
+D:\Proyectos\POS_TechnicalTest\POS_CASHMasters\Catalogs\obj\Debug\net6.0\Data.dll
+D:\Proyectos\POS_TechnicalTest\POS_CASHMasters\Catalogs\obj\Debug\net6.0\refint\Data.dll
+D:\Proyectos\POS_TechnicalTest\POS_CASHMasters\Catalogs\obj\Debug\net6.0\Data.pdb
+D:\Proyectos\POS_TechnicalTest\POS_CASHMasters\Catalogs\obj\Debug\net6.0\ref\Data.dll

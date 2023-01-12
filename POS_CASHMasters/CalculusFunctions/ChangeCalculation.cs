@@ -4,10 +4,14 @@ namespace CalculusFunctions
 {
     public class ChangeCalculation : IChangeCalculation
     {
-        
+        private double[] denominations;
+        public ChangeCalculation(double[] denominations)
+        {
+            this.denominations = denominations;
+        }
+
         Dictionary<double, int> IChangeCalculation.CalculateChange(Dictionary<double, double> amountPayment, double price)
         {
-            double[] denominations = {1000, 500, 100, 50, 20, 10, 5, 1, 0.5 };
             double totalAmount = calculateAmountPayment(amountPayment);
             Dictionary<double, int> coinsUsed = new();
             if (totalAmount > price)
@@ -19,9 +23,6 @@ namespace CalculusFunctions
                     coinsUsed.Add(denominations[i], 0);
                 }
                 
-
-
-        
                 var changeTemp = totalChange;
                 foreach (var coin in denominations)
                 {

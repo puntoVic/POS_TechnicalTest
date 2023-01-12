@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POS_CASHMasters", "POS_CASHMasters\POS_CASHMasters.csproj", "{525E0C25-38C2-4641-A374-33A016C1D337}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "POS_CASHMasters", "POS_CASHMasters\POS_CASHMasters.csproj", "{525E0C25-38C2-4641-A374-33A016C1D337}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculusFunctions", "CalculusFunctions\CalculusFunctions.csproj", "{8D4480D0-E773-44B1-8897-AC1D4CE704B1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CalculusFunctions", "CalculusFunctions\CalculusFunctions.csproj", "{8D4480D0-E773-44B1-8897-AC1D4CE704B1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entities", "Entities\Entities.csproj", "{1E8B66AE-64F8-4A17-95B0-79DACA22234D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Catalogs\Data.csproj", "{94317C00-108D-4531-822C-C6BE08C4F065}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{8D4480D0-E773-44B1-8897-AC1D4CE704B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8D4480D0-E773-44B1-8897-AC1D4CE704B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8D4480D0-E773-44B1-8897-AC1D4CE704B1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1E8B66AE-64F8-4A17-95B0-79DACA22234D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1E8B66AE-64F8-4A17-95B0-79DACA22234D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1E8B66AE-64F8-4A17-95B0-79DACA22234D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1E8B66AE-64F8-4A17-95B0-79DACA22234D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94317C00-108D-4531-822C-C6BE08C4F065}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94317C00-108D-4531-822C-C6BE08C4F065}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94317C00-108D-4531-822C-C6BE08C4F065}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94317C00-108D-4531-822C-C6BE08C4F065}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
